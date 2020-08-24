@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'HelpEvansEscape',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Palette.iconBack,
+        primarySwatch: Colors.lime,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: Palette.scaffold,
       ),
