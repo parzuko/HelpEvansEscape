@@ -9,6 +9,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final double topPadding = (screenHeight / 9);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Palette.scaffold,
@@ -16,13 +19,20 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           "Help Evans Escape !",
         ),
-        centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(0, topPadding, 0, 0),
+        width: screenWidth,
+        height: screenHeight,
+        color: Colors.transparent,
         child: Container(
-          height: 800,
-          color: Palette.iconBack,
+          decoration: BoxDecoration(
+            color: Palette.iconBack,
+            borderRadius: BorderRadius.only(
+              topLeft: const Radius.circular(60.0),
+              //topRight: const Radius.circular(40.0),
+            ),
+          ),
         ),
       ),
     );
