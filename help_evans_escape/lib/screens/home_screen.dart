@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
+import 'package:maze/maze.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -33,7 +34,21 @@ class _HomeScreenState extends State<HomeScreen> {
               //topRight: const Radius.circular(40.0),
             ),
           ),
-          // child: ,
+          child: Maze(
+            player: MazeItem(
+              "assets/theMan.png",
+              ImageType.asset,
+            ),
+            columns: 10,
+            rows: 20,
+            wallThickness: 3,
+            wallColor: Palette.brightText,
+            finish: MazeItem(
+              'https://image.flaticon.com/icons/png/512/1506/1506339.png',
+              ImageType.network,
+            ),
+            onFinish: () => print("Horray"),
+          ),
         ),
       ),
     );
