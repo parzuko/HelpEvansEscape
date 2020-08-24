@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
 import 'package:maze/maze.dart';
@@ -19,6 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0.0,
         title: Text(
           "Help Evans Escape !",
+          style: const TextStyle(
+            color: Colors.black,
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: -2,
+            fontFamily: 'Domine',
+          ),
         ),
       ),
       body: Container(
@@ -34,20 +43,21 @@ class _HomeScreenState extends State<HomeScreen> {
               //topRight: const Radius.circular(40.0),
             ),
           ),
+          //child: Text("Hello"),
           child: Maze(
             player: MazeItem(
-              "assets/theMan.png",
+              "assets/evan.jpg",
               ImageType.asset,
             ),
             columns: 10,
             rows: 20,
             wallThickness: 3,
-            wallColor: Palette.brightText,
+            wallColor: Colors.black,
             finish: MazeItem(
-              'https://image.flaticon.com/icons/png/512/1506/1506339.png',
-              ImageType.network,
+              "assets/trophy.jpg",
+              ImageType.asset,
             ),
-            onFinish: () => print("Horray"),
+            onFinish: () => print("yay"),
           ),
         ),
       ),
