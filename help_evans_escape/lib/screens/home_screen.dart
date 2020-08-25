@@ -16,6 +16,15 @@ class _HomeScreenState extends State<HomeScreen> {
     HotRestartController.performHotRestart(context);
   }
 
+  var _options = ["Easy", "Medium", "Hard"];
+  var dropColor = {
+    "Easy": Palette.easy,
+    "Medium": Palette.medium,
+    "Hard": Palette.hard,
+  };
+
+  var currentSelected = "Easy";
+
   void getInfo() async {
     await showDialog(
         context: context,
@@ -150,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Difficulty: ",
+                            "Difficulty : ",
                             style: TextStyle(
                                 color: Palette.textColor,
                                 fontSize: 30.0,
@@ -158,22 +167,35 @@ class _HomeScreenState extends State<HomeScreen> {
                                 letterSpacing: -2,
                                 fontFamily: 'Alata'),
                           ),
-                          Text(
-                            "Easy",
-                            style: TextStyle(
-                              color: Palette.easy,
-                              fontSize: 28.0,
-                              //fontWeight: FontWeight.bold,
-                              letterSpacing: -2,
-                              fontFamily: 'Pacifico',
-                            ),
-                          )
+                          DropdownButton<String>(
+                            items: _options.map((String dropDownStringItem) {
+                              return DropdownMenuItem<String>(
+                                value: dropDownStringItem,
+                                child: Text(
+                                  "  " + dropDownStringItem,
+                                  style: TextStyle(
+                                    color: dropColor[dropDownStringItem],
+                                    fontSize: 28.0,
+                                    //fontWeight: FontWeight.bold,
+                                    letterSpacing: -2,
+                                    fontFamily: 'Pacifico',
+                                  ),
+                                ),
+                              );
+                            }).toList(),
+                            onChanged: (String newValueSelected) {
+                              setState(() {
+                                this.currentSelected = newValueSelected;
+                              });
+                            },
+                            value: currentSelected,
+                          ),
                         ],
                       ),
                     ),
                     Expanded(
                       flex: 20,
-                      child: modes["Easy"],
+                      child: modes[currentSelected],
                     ),
                   ],
                 ),
