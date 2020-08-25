@@ -17,17 +17,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final modes = {
-      "easy": Maze(
+      "Easy": Maze(
         player: MazeItem(
-          "assets/evan.jpg",
+          "assets/exercise.png",
           ImageType.asset,
         ),
-        columns: 10,
-        rows: 20,
+        columns: 5,
+        rows: 10,
         wallThickness: 5,
         wallColor: Palette.easy,
         finish: MazeItem(
-          "assets/trophy.jpg",
+          "assets/jail.png",
           ImageType.asset,
         ),
         onFinish: () => restart(),
@@ -41,6 +41,21 @@ class _HomeScreenState extends State<HomeScreen> {
         rows: 20,
         wallThickness: 5,
         wallColor: Palette.medium,
+        finish: MazeItem(
+          "assets/jail.png",
+          ImageType.asset,
+        ),
+        onFinish: () => restart(),
+      ),
+      "Hard": Maze(
+        player: MazeItem(
+          "assets/exercise.png",
+          ImageType.asset,
+        ),
+        columns: 20,
+        rows: 30,
+        wallThickness: 5,
+        wallColor: Palette.hard,
         finish: MazeItem(
           "assets/jail.png",
           ImageType.asset,
@@ -116,12 +131,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   color: Palette.iconBack,
                   borderRadius: BorderRadius.only(
-                    topLeft: const Radius.circular(60.0),
+                    topLeft: const Radius.circular(80.0),
                     //topRight: const Radius.circular(40.0),
                   ),
                 ),
                 //child: Text("Hello"),
-                child: modes["Medium"],
+                child: modes["Hard"],
               ),
             ),
           ),
