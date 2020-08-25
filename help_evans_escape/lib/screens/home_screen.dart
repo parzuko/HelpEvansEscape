@@ -32,10 +32,25 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         onFinish: () => restart(),
       ),
+      "Medium": Maze(
+        player: MazeItem(
+          "assets/exercise.png",
+          ImageType.asset,
+        ),
+        columns: 10,
+        rows: 20,
+        wallThickness: 3,
+        wallColor: Colors.black,
+        finish: MazeItem(
+          "assets/jail.png",
+          ImageType.asset,
+        ),
+        onFinish: () => restart(),
+      ),
     };
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
-    final double topPadding = (screenHeight / 9);
+    final double topPadding = (screenHeight / 15);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Palette.scaffold,
@@ -65,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           //child: Text("Hello"),
-          child: modes["easy"],
+          child: modes["Medium"],
         ),
       ),
     );
