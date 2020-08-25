@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
-import 'package:help_evans_escape/screens/home_screen.dart';
+
 import 'package:introduction_screen/introduction_screen.dart';
 
 class NewGamePrompt extends StatelessWidget {
@@ -24,7 +24,7 @@ class NewGamePrompt extends StatelessWidget {
             height: 275.0,
           ),
         ),
-        title: "This is the Title",
+        title: "",
         body: "",
         decoration: pageDecoration,
       ),
@@ -43,17 +43,21 @@ class NewGamePrompt extends StatelessWidget {
         dotsDecorator: DotsDecorator(
           size: const Size.square(10.0),
           activeSize: const Size(20.0, 10.0),
-          activeColor: Palette.brightText,
+          activeColor: Palette.iconBack,
           color: Palette.textColor,
           spacing: const EdgeInsets.symmetric(horizontal: 3.0),
           activeShape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0)),
         ),
-        skip: Text("Skip"),
-        showSkipButton: true,
-        next: const Icon(Icons.navigate_next),
-        showNextButton: true,
-        done: const Text("YES"),
+        done: Text(
+          "Duhh!",
+          style: const TextStyle(
+            color: Palette.brightText,
+            fontFamily: "Domine",
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
+        ),
         globalBackgroundColor: Palette.scaffold,
         pages: getPages(),
         onDone: () {
