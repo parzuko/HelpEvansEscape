@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
-import 'package:help_evans_escape/screens/info.dart';
+import 'package:help_evans_escape/screens/new_game_prompt.dart';
 
-class InfoPage extends StatelessWidget {
+class NewGameInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
       title: Center(
         child: Text(
-          "About",
+          "Run Again? ",
           style: const TextStyle(
             color: Palette.textColor,
             fontSize: 30.0,
@@ -18,7 +18,7 @@ class InfoPage extends StatelessWidget {
           ),
         ),
       ),
-      content: IntroScreen(),
+      content: NewGamePrompt(),
     );
   }
 }

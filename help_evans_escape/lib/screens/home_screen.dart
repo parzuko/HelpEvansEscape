@@ -2,6 +2,7 @@ import 'package:help_evans_escape/configs/restart.dart';
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
 import 'package:help_evans_escape/screens/alert.dart';
+import 'package:help_evans_escape/screens/new_game.dart';
 
 import 'package:maze/maze.dart';
 
@@ -25,6 +26,21 @@ class _HomeScreenState extends State<HomeScreen> {
         });
   }
 
+  void newGame() async {
+    var shouldRestart = await showDialog(
+        context: context,
+        builder: (context) {
+          return Container(
+            child: NewGameInfo(),
+          );
+        });
+
+    if (shouldRestart == 1) {
+      setState(() {});
+      restart();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final modes = {
@@ -41,7 +57,9 @@ class _HomeScreenState extends State<HomeScreen> {
           "assets/jail.png",
           ImageType.asset,
         ),
-        onFinish: () => restart(),
+        onFinish: () {
+          newGame();
+        },
       ),
       "Medium": Maze(
         player: MazeItem(
@@ -97,9 +115,9 @@ class _HomeScreenState extends State<HomeScreen> {
               getInfo();
             },
             icon: Icon(
-              Icons.more_horiz,
+              Icons.info_outline,
             ),
-            iconSize: 50.0,
+            iconSize: 30.0,
             color: Palette.textColor,
           )
         ],

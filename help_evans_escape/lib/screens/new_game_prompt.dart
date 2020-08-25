@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
+import 'package:help_evans_escape/screens/home_screen.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-class IntroScreen extends StatelessWidget {
+class NewGamePrompt extends StatelessWidget {
   final pageDecoration = PageDecoration(
     titleTextStyle: TextStyle(
       color: Palette.textColor,
@@ -19,49 +20,12 @@ class IntroScreen extends StatelessWidget {
       PageViewModel(
         image: Center(
           child: Image.asset(
-            "assets/jail.png",
+            "assets/exercise.png",
             height: 275.0,
           ),
         ),
         title: "This is the Title",
         body: "",
-        // footer: Text("Hello"),
-        decoration: pageDecoration,
-      ),
-      PageViewModel(
-        image: Center(
-          child: Image.asset(
-            "assets/young.png",
-            height: 275.0,
-          ),
-        ),
-        title: "This is the Title",
-        body: "",
-        // footer: Text("Hello"),
-        decoration: pageDecoration,
-      ),
-      PageViewModel(
-        image: Center(
-          child: Image.asset(
-            "assets/policeman.png",
-            height: 275.0,
-          ),
-        ),
-        title: "This is the Title",
-        body: "",
-        // footer: Text("Hello"),
-        decoration: pageDecoration,
-      ),
-      PageViewModel(
-        image: Center(
-          child: Image.asset(
-            "assets/handcuffs.png",
-            height: 275.0,
-          ),
-        ),
-        title: "This is the Title",
-        body: "",
-        // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
     ];
@@ -89,15 +53,11 @@ class IntroScreen extends StatelessWidget {
         showSkipButton: true,
         next: const Icon(Icons.navigate_next),
         showNextButton: true,
-        done: const Text("Done"),
+        done: const Text("YES"),
         globalBackgroundColor: Palette.scaffold,
         pages: getPages(),
         onDone: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => HomeScreen()),
-          // );
-          Navigator.pop(context);
+          Navigator.pop(context, 1);
         },
       ),
     );
