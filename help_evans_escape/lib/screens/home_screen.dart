@@ -1,7 +1,8 @@
-import 'dart:math';
 import 'package:help_evans_escape/configs/restart.dart';
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
+import 'package:help_evans_escape/screens/alert.dart';
+
 import 'package:maze/maze.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,6 +13,16 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   restart() {
     HotRestartController.performHotRestart(context);
+  }
+
+  void getInfo() async {
+    await showDialog(
+        context: context,
+        builder: (context) {
+          return Container(
+            child: InfoPage(),
+          );
+        });
   }
 
   @override
@@ -82,7 +93,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              getInfo();
+            },
             icon: Icon(
               Icons.more_horiz,
             ),
@@ -136,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 //child: Text("Hello"),
-                child: modes["Hard"],
+                child: modes["Easy"],
               ),
             ),
           ),
