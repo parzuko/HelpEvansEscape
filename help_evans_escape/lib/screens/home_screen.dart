@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           "Help Evans Escape !",
           style: const TextStyle(
-            color: Colors.black,
+            color: Palette.textColor,
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
             letterSpacing: -2,
@@ -68,7 +68,11 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.more_horiz),
+            icon: Icon(
+              Icons.more_horiz,
+            ),
+            iconSize: 50.0,
+            color: Palette.textColor,
           )
         ],
       ),
@@ -82,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   "Difficulty: ",
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Palette.textColor,
                       fontSize: 25.0,
                       fontWeight: FontWeight.bold,
                       letterSpacing: -2,
