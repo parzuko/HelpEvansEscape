@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:help_evans_escape/configs/restart.dart';
 import 'package:help_evans_escape/screens/home_screen.dart';
 
 import 'configs/palette.dart';
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: Palette.scaffold,
       ),
-      home: HomeScreen(),
+      home: HotRestartController(
+        child: HomeScreen(),
+      ),
     );
   }
 }
