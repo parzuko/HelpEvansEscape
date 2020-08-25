@@ -5,11 +5,11 @@ import 'package:introduction_screen/introduction_screen.dart';
 class IntroScreen extends StatelessWidget {
   final pageDecoration = PageDecoration(
     titleTextStyle: TextStyle(
-      color: Palette.textColor,
+      color: Palette.scaffold,
       fontSize: 18.0,
       fontWeight: FontWeight.bold,
       letterSpacing: 1,
-      fontFamily: 'Domine',
+      fontFamily: 'Alata',
     ),
     contentPadding: const EdgeInsets.all(50),
   );
@@ -79,18 +79,32 @@ class IntroScreen extends StatelessWidget {
         dotsDecorator: DotsDecorator(
           size: const Size.square(10.0),
           activeSize: const Size(20.0, 10.0),
-          activeColor: Palette.brightText,
+          activeColor: Palette.scaffold,
           color: Palette.textColor,
           spacing: const EdgeInsets.symmetric(horizontal: 3.0),
           activeShape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0)),
         ),
-        skip: Text("Skip"),
+        skip: Text(
+          "Skip",
+          style: TextStyle(
+            color: Palette.textColor,
+            fontFamily: "Alata",
+            fontSize: 14,
+          ),
+        ),
         showSkipButton: true,
         next: const Icon(Icons.navigate_next),
         showNextButton: true,
-        done: const Text("Done"),
-        globalBackgroundColor: Palette.scaffold,
+        done: Text(
+          "Start",
+          style: TextStyle(
+            color: Palette.textColor,
+            fontFamily: "Alata",
+            fontSize: 14,
+          ),
+        ),
+        globalBackgroundColor: Palette.lightPink,
         pages: getPages(),
         onDone: () {
           // Navigator.push(

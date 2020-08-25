@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
           "assets/jail.png",
           ImageType.asset,
         ),
-        onFinish: () => restart(),
+        onFinish: () => newGame(),
       ),
       "Hard": Maze(
         player: MazeItem(
@@ -89,24 +89,26 @@ class _HomeScreenState extends State<HomeScreen> {
           "assets/jail.png",
           ImageType.asset,
         ),
-        onFinish: () => restart(),
+        onFinish: () => newGame(),
       ),
     };
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
-    final double topPadding = (screenHeight / 15);
+    final double topPadding = (screenHeight / 20);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Palette.scaffold,
+        backgroundColor: Palette.lightPink,
+        shadowColor: Palette.lightPink,
         elevation: 0.0,
+        centerTitle: true,
         title: Text(
           "Help Evans Escape !",
           style: const TextStyle(
-            color: Palette.textColor,
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: -2,
-            fontFamily: 'Domine',
+            color: Palette.scaffold,
+            fontSize: 37.0,
+            //fontWeight: FontWeight.bold,
+            //letterSpacing: -2,
+            fontFamily: "Alata",
           ),
         ),
         actions: [
@@ -118,39 +120,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Icons.info_outline,
             ),
             iconSize: 30.0,
-            color: Palette.textColor,
+            color: Palette.scaffold,
           )
         ],
       ),
       body: Column(
         children: [
-          Expanded(
-            flex: 1,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Difficulty: ",
-                  style: TextStyle(
-                      color: Palette.textColor,
-                      fontSize: 25.0,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: -2,
-                      fontFamily: 'Domine'),
-                ),
-                Text(
-                  "Medium",
-                  style: TextStyle(
-                    color: Palette.medium,
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: -2,
-                    fontFamily: 'Domine',
-                  ),
-                )
-              ],
-            ),
-          ),
           Expanded(
             flex: 22,
             child: Container(
@@ -160,14 +135,48 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.transparent,
               child: Container(
                 decoration: BoxDecoration(
-                  color: Palette.iconBack,
+                  color: Palette.scaffold,
                   borderRadius: BorderRadius.only(
-                    topLeft: const Radius.circular(80.0),
-                    //topRight: const Radius.circular(40.0),
+                    topLeft: const Radius.circular(50.0),
+                    topRight: const Radius.circular(50.0),
                   ),
                 ),
                 //child: Text("Hello"),
-                child: modes["Medium"],
+                child: Column(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Difficulty: ",
+                            style: TextStyle(
+                                color: Palette.textColor,
+                                fontSize: 30.0,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: -2,
+                                fontFamily: 'Alata'),
+                          ),
+                          Text(
+                            "Easy",
+                            style: TextStyle(
+                              color: Palette.easy,
+                              fontSize: 28.0,
+                              //fontWeight: FontWeight.bold,
+                              letterSpacing: -2,
+                              fontFamily: 'Pacifico',
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 20,
+                      child: modes["Easy"],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -10,14 +10,15 @@ class NewGameInfo extends StatelessWidget {
         child: Text(
           "Evans is Safe!",
           style: const TextStyle(
-            color: Palette.textColor,
+            color: Palette.scaffold,
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
-            letterSpacing: -2,
-            fontFamily: 'Domine',
+            letterSpacing: 2,
+            fontFamily: 'Pacifico',
           ),
         ),
       ),
+      backgroundColor: Palette.lightBlue,
       content: NewGamePrompt(),
     );
   }

@@ -11,4 +11,9 @@ class Palette {
   static const Color easy = Color(0xff17A697);
   static const Color medium = Color(0xff509BE1);
   static const Color hard = Color(0xffD93240);
+
+  //Cool Colors Trying
+  static const Color coolBlue = Color(0xff556fa4);
+  static const Color lightBlue = Color(0xff36b0d5);
+  static const Color lightPink = Color(0xffe25f78);
 }

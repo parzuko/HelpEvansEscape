@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'HelpEvansEscape',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.lime,
+        primarySwatch: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        scaffoldBackgroundColor: Palette.scaffold,
+        scaffoldBackgroundColor: Palette.lightPink,
       ),
       home: HotRestartController(
         child: HomeScreen(),

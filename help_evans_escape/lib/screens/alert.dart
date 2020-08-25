@@ -6,15 +6,16 @@ class InfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      backgroundColor: Palette.lightPink,
       title: Center(
         child: Text(
           "About",
           style: const TextStyle(
-            color: Palette.textColor,
+            color: Palette.scaffold,
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
-            letterSpacing: -2,
-            fontFamily: 'Domine',
+            letterSpacing: 4,
+            fontFamily: 'Pacifico',
           ),
         ),
       ),

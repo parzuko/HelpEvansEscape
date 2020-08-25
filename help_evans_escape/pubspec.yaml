@@ -62,11 +62,19 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Domine
+    - family: Alata
       fonts:
-        - asset: fonts/Domine-Regular.ttf
-        - asset: fonts/Domine-Bold.ttf
-          
+        - asset: fonts/Alata-Regular.ttf
+        
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
+
+    
+    - family: Lato
+      fonts:
+        - asset: fonts/Lato-BoldItalic.ttf
+
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
