@@ -8,7 +8,7 @@ class NewGameInfo extends StatelessWidget {
     return AlertDialog(
       title: Center(
         child: Text(
-          "Run Again? ",
+          "Evans is Safe!",
           style: const TextStyle(
             color: Palette.textColor,
             fontSize: 30.0,

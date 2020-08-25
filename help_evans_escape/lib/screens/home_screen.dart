@@ -167,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 //child: Text("Hello"),
-                child: modes["Easy"],
+                child: modes["Medium"],
               ),
             ),
           ),

@@ -7,9 +7,9 @@ class NewGamePrompt extends StatelessWidget {
   final pageDecoration = PageDecoration(
     titleTextStyle: TextStyle(
       color: Palette.textColor,
-      fontSize: 27.0,
-      fontWeight: FontWeight.bold,
-      letterSpacing: 1,
+      fontSize: 22.0,
+      fontWeight: FontWeight.normal,
+      letterSpacing: -1,
       fontFamily: 'Domine',
     ),
     contentPadding: const EdgeInsets.all(50),
@@ -24,7 +24,7 @@ class NewGamePrompt extends StatelessWidget {
             height: 275.0,
           ),
         ),
-        title: "",
+        title: "Woohooo🎉🎉.The Governer was fooled again !",
         body: "",
         decoration: pageDecoration,
       ),
@@ -50,12 +50,13 @@ class NewGamePrompt extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0)),
         ),
         done: Text(
-          "Duhh!",
+          "New Game",
           style: const TextStyle(
             color: Palette.brightText,
             fontFamily: "Domine",
             fontWeight: FontWeight.bold,
-            fontSize: 20,
+            fontSize: 16,
+            letterSpacing: -2,
           ),
         ),
         globalBackgroundColor: Palette.scaffold,
