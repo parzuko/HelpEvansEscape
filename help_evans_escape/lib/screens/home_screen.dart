@@ -24,8 +24,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         columns: 10,
         rows: 20,
-        wallThickness: 3,
-        wallColor: Colors.black,
+        wallThickness: 5,
+        wallColor: Palette.easy,
         finish: MazeItem(
           "assets/trophy.jpg",
           ImageType.asset,
@@ -39,8 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         columns: 10,
         rows: 20,
-        wallThickness: 3,
-        wallColor: Colors.black,
+        wallThickness: 5,
+        wallColor: Palette.medium,
         finish: MazeItem(
           "assets/jail.png",
           ImageType.asset,
