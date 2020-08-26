@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:help_evans_escape/configs/palette.dart';
+import 'package:help_evans_escape/configs/config.dart';
 import 'package:help_evans_escape/screens/screen.dart';
 import 'package:maze/maze.dart';
 
@@ -130,11 +130,15 @@ class _MediumModeState extends State<MediumMode> {
                               setState(() {
                                 this.currentSelected = newValueSelected;
                                 if (currentSelected == "Easy") {
-                                  Navigator.pushReplacementNamed(
-                                      context, "/easy");
+                                  Navigator.pushReplacement(
+                                    context,
+                                    SizeRoute(page: HomeScreen()),
+                                  );
                                 } else if (currentSelected == "Hard") {
-                                  Navigator.pushReplacementNamed(
-                                      context, "/hard");
+                                  Navigator.pushReplacement(
+                                    context,
+                                    SizeRoute(page: HardMode()),
+                                  );
                                 }
                               });
                             },

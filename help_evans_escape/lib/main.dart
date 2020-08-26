@@ -18,11 +18,6 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Palette.lightPink,
       ),
       home: HomeScreen(),
-      routes: {
-        "/easy": (_) => HomeScreen(),
-        "/medium": (_) => MediumMode(),
-        "/hard": (_) => HardMode(),
-      },
     );
   }
 }
