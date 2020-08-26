@@ -6,12 +6,12 @@ import 'package:help_evans_escape/screens/new_game.dart';
 
 import 'package:maze/maze.dart';
 
-class HomeScreen extends StatefulWidget {
+class HardMode extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HardModeState createState() => _HardModeState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HardModeState extends State<HardMode> {
   Future futureMaze;
   restart() {
     HotRestartController.performHotRestart(context);
@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "Hard": Palette.hard,
   };
 
-  var currentSelected = "Easy";
+  var currentSelected = "Hard";
 
   void getInfo() async {
     await showDialog(
@@ -138,10 +138,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             onChanged: (String newValueSelected) {
                               setState(() {
                                 this.currentSelected = newValueSelected;
-                                if (currentSelected == "Medium") {
+                                if (currentSelected == "Easy") {
                                   Navigator.pushReplacementNamed(
-                                      context, "/medium");
-                                } else if (currentSelected == "Hard") {
+                                      context, "/easy");
+                                } else if (currentSelected == "Medium") {
                                   Navigator.pushReplacementNamed(
                                       context, "/hard");
                                 }
@@ -159,17 +159,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           "assets/exercise.png",
                           ImageType.asset,
                         ),
-                        columns: 5,
-                        rows: 10,
+                        columns: 20,
+                        rows: 30,
                         wallThickness: 5,
-                        wallColor: Palette.easy,
+                        wallColor: Palette.hard,
                         finish: MazeItem(
                           "assets/jail.png",
                           ImageType.asset,
                         ),
-                        onFinish: () {
-                          newGame();
-                        },
+                        onFinish: () => newGame(),
                       ),
                     ),
                   ],

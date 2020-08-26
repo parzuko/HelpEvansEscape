@@ -6,12 +6,12 @@ import 'package:help_evans_escape/screens/new_game.dart';
 
 import 'package:maze/maze.dart';
 
-class HomeScreen extends StatefulWidget {
+class MediumMode extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _MediumModeState createState() => _MediumModeState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MediumModeState extends State<MediumMode> {
   Future futureMaze;
   restart() {
     HotRestartController.performHotRestart(context);
@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "Hard": Palette.hard,
   };
 
-  var currentSelected = "Easy";
+  var currentSelected = "Medium";
 
   void getInfo() async {
     await showDialog(
@@ -138,9 +138,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             onChanged: (String newValueSelected) {
                               setState(() {
                                 this.currentSelected = newValueSelected;
-                                if (currentSelected == "Medium") {
+                                if (currentSelected == "Easy") {
                                   Navigator.pushReplacementNamed(
-                                      context, "/medium");
+                                      context, "/easy");
                                 } else if (currentSelected == "Hard") {
                                   Navigator.pushReplacementNamed(
                                       context, "/hard");
@@ -159,17 +159,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           "assets/exercise.png",
                           ImageType.asset,
                         ),
-                        columns: 5,
-                        rows: 10,
+                        columns: 10,
+                        rows: 20,
                         wallThickness: 5,
-                        wallColor: Palette.easy,
+                        wallColor: Palette.medium,
                         finish: MazeItem(
                           "assets/jail.png",
                           ImageType.asset,
                         ),
-                        onFinish: () {
-                          newGame();
-                        },
+                        onFinish: () => newGame(),
                       ),
                     ),
                   ],

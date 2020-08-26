@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/restart.dart';
+import 'package:help_evans_escape/screens/hard.dart';
 import 'package:help_evans_escape/screens/home_screen.dart';
+import 'package:help_evans_escape/screens/medium.dart';
 
 import 'configs/palette.dart';
 
@@ -22,6 +24,11 @@ class MyApp extends StatelessWidget {
       home: HotRestartController(
         child: HomeScreen(),
       ),
+      routes: {
+        "/easy": (_) => HomeScreen(),
+        "/medium": (_) => MediumMode(),
+        "/hard": (_) => HardMode(),
+      },
     );
   }
 }
