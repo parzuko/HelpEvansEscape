@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
-import 'package:help_evans_escape/screens/info.dart';
+import 'package:help_evans_escape/screens/screen.dart';
 
 class InfoPage extends StatelessWidget {
   @override

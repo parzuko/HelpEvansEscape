@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:help_evans_escape/configs/restart.dart';
-import 'package:help_evans_escape/screens/hard.dart';
-import 'package:help_evans_escape/screens/home_screen.dart';
-import 'package:help_evans_escape/screens/medium.dart';
-
+import 'package:help_evans_escape/screens/screen.dart';
 import 'configs/palette.dart';
 
 void main() {
@@ -21,9 +17,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: Palette.lightPink,
       ),
-      home: HotRestartController(
-        child: HomeScreen(),
-      ),
+      home: HomeScreen(),
       routes: {
         "/easy": (_) => HomeScreen(),
         "/medium": (_) => MediumMode(),

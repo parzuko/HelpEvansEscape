@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
-
 import 'package:introduction_screen/introduction_screen.dart';
 
 class NewGamePrompt extends StatelessWidget {

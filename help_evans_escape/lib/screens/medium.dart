@@ -1,9 +1,6 @@
-import 'package:help_evans_escape/configs/restart.dart';
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
-import 'package:help_evans_escape/screens/alert.dart';
-import 'package:help_evans_escape/screens/new_game.dart';
-
+import 'package:help_evans_escape/screens/screen.dart';
 import 'package:maze/maze.dart';
 
 class MediumMode extends StatefulWidget {
@@ -12,11 +9,6 @@ class MediumMode extends StatefulWidget {
 }
 
 class _MediumModeState extends State<MediumMode> {
-  Future futureMaze;
-  restart() {
-    HotRestartController.performHotRestart(context);
-  }
-
   var _options = ["Easy", "Medium", "Hard"];
   var dropColor = {
     "Easy": Palette.easy,

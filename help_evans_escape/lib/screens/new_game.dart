@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/palette.dart';
-import 'package:help_evans_escape/screens/new_game_prompt.dart';
+import 'package:help_evans_escape/screens/screen.dart';
 
 class NewGameInfo extends StatelessWidget {
   @override
