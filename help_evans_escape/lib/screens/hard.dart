@@ -134,7 +134,7 @@ class _HardModeState extends State<HardMode> {
                                       context, "/easy");
                                 } else if (currentSelected == "Medium") {
                                   Navigator.pushReplacementNamed(
-                                      context, "/hard");
+                                      context, "/medium");
                                 }
                               });
                             },
