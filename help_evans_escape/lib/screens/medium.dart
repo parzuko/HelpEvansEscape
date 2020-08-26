@@ -38,7 +38,10 @@ class _MediumModeState extends State<MediumMode> {
         });
 
     if (shouldRestart == 1) {
-      Navigator.pushReplacementNamed(context, "/medium");
+      Navigator.pushReplacement(
+        context,
+        SizeRoute(page: MediumMode()),
+      );
     }
   }
 

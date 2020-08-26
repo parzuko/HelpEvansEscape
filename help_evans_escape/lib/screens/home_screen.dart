@@ -38,7 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
         });
 
     if (shouldRestart == 1) {
-      Navigator.pushReplacementNamed(context, "/easy");
+      Navigator.pushReplacement(
+        context,
+        SizeRoute(page: HomeScreen()),
+      );
     }
   }
 

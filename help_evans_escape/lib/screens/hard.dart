@@ -38,7 +38,10 @@ class _HardModeState extends State<HardMode> {
         });
 
     if (shouldRestart == 1) {
-      Navigator.pushReplacementNamed(context, "/hard");
+      Navigator.pushReplacement(
+        context,
+        SizeRoute(page: HardMode()),
+      );
     }
   }
 
