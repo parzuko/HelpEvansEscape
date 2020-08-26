@@ -46,8 +46,7 @@ class _MediumModeState extends State<MediumMode> {
         });
 
     if (shouldRestart == 1) {
-      setState(() {});
-      restart();
+      Navigator.pushReplacementNamed(context, "/medium");
     }
   }
 

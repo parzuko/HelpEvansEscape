@@ -46,8 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
         });
 
     if (shouldRestart == 1) {
-      setState(() {});
-      restart();
+      Navigator.pushReplacementNamed(context, "/easy");
     }
   }
 
