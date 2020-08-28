@@ -162,7 +162,7 @@ class _HardModeState extends State<HardMode> {
                         wallThickness: 5,
                         wallColor: Palette.hard,
                         finish: MazeItem(
-                          "assets/jail.png",
+                          "assets/van.png",
                           ImageType.asset,
                         ),
                         onFinish: () => newGame(),

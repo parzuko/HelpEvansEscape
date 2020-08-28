@@ -19,11 +19,11 @@ class IntroScreen extends StatelessWidget {
       PageViewModel(
         image: Center(
           child: Image.asset(
-            "assets/jail.png",
+            "assets/policeman.png",
             height: 275.0,
           ),
         ),
-        title: "The police is after Evans!",
+        title: "McLeary's blunders enabled Evans to escape! ",
         body: "",
         // footer: Text("Hello"),
         decoration: pageDecoration,
@@ -35,7 +35,7 @@ class IntroScreen extends StatelessWidget {
             height: 275.0,
           ),
         ),
-        title: "The Governer was fooled by Evans again! ",
+        title: "The Governer is extremely furious.",
         body: "",
         // footer: Text("Hello"),
         decoration: pageDecoration,
@@ -43,11 +43,11 @@ class IntroScreen extends StatelessWidget {
       PageViewModel(
         image: Center(
           child: Image.asset(
-            "assets/policeman.png",
+            "assets/jail.png",
             height: 275.0,
           ),
         ),
-        title: "McLeary's blunders were a godsend ",
+        title: "The entire Police is after Evans the Break",
         body: "",
         // footer: Text("Hello"),
         decoration: pageDecoration,
@@ -59,7 +59,7 @@ class IntroScreen extends StatelessWidget {
             height: 275.0,
           ),
         ),
-        title: "Help Evan runaway before he gets caught!",
+        title: "Help Evans Esacpe & get to his runaway van!",
         body: "",
         // footer: Text("Hello"),
         decoration: pageDecoration,

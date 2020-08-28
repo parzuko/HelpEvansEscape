@@ -162,7 +162,7 @@ class _MediumModeState extends State<MediumMode> {
                         wallThickness: 5,
                         wallColor: Palette.medium,
                         finish: MazeItem(
-                          "assets/jail.png",
+                          "assets/van.png",
                           ImageType.asset,
                         ),
                         onFinish: () => newGame(),

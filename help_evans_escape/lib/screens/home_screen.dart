@@ -162,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         wallThickness: 5,
                         wallColor: Palette.easy,
                         finish: MazeItem(
-                          "assets/jail.png",
+                          "assets/van.png",
                           ImageType.asset,
                         ),
                         onFinish: () {
