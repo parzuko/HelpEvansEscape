@@ -61,8 +61,6 @@ class _MediumModeState extends State<MediumMode> {
           style: const TextStyle(
             color: Palette.scaffold,
             fontSize: 37.0,
-            //fontWeight: FontWeight.bold,
-            //letterSpacing: -2,
             fontFamily: "Alata",
           ),
         ),
@@ -96,7 +94,6 @@ class _MediumModeState extends State<MediumMode> {
                     topRight: const Radius.circular(50.0),
                   ),
                 ),
-                //child: Text("Hello"),
                 child: Column(
                   children: [
                     Expanded(

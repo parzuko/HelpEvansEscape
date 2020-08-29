@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/first_time.dart';
-import 'package:help_evans_escape/screens/splash_screen.dart';
-
 import 'configs/palette.dart';
 
 void main() {

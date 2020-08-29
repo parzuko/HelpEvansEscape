@@ -25,7 +25,6 @@ class IntroScreen extends StatelessWidget {
         ),
         title: "Stephen blunders enabled Evans to escape! ",
         body: "",
-        // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
       PageViewModel(
@@ -38,7 +37,6 @@ class IntroScreen extends StatelessWidget {
         title:
             "The Governer was decieved again and again by Evans & is very furious.",
         body: "",
-        // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
       PageViewModel(
@@ -50,7 +48,6 @@ class IntroScreen extends StatelessWidget {
         ),
         title: "The entire Police force is looking for \nEvans the Break",
         body: "",
-        // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
       PageViewModel(
@@ -62,7 +59,6 @@ class IntroScreen extends StatelessWidget {
         ),
         title: "Help Evans Esacpe & get to his runaway van, before hes caught!",
         body: "",
-        // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
     ];
@@ -108,10 +104,6 @@ class IntroScreen extends StatelessWidget {
         globalBackgroundColor: Palette.lightPink,
         pages: getPages(),
         onDone: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => HomeScreen()),
-          // );
           Navigator.pop(context);
         },
       ),
