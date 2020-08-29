@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/config.dart';
 import 'package:help_evans_escape/screens/screen.dart';
 import 'package:maze/maze.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -53,8 +52,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    //Future.delayed(Duration.zero, () => getInfo());
-
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
     final double topPadding = (screenHeight / 20);

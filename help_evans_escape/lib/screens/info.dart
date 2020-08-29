@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:help_evans_escape/configs/config.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:help_evans_escape/screens/screen.dart';
 
 class IntroScreen extends StatelessWidget {
   final pageDecoration = PageDecoration(
@@ -99,7 +98,7 @@ class IntroScreen extends StatelessWidget {
         next: const Icon(Icons.navigate_next),
         showNextButton: true,
         done: Text(
-          "Start",
+          "Done",
           style: TextStyle(
             color: Palette.textColor,
             fontFamily: "Alata",
