@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:help_evans_escape/configs/first_time.dart';
 import 'package:help_evans_escape/screens/screen.dart';
 import 'configs/palette.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: Palette.lightPink,
       ),
-      home: HomeScreen(),
+      home: LandingPage(),
     );
   }
 }

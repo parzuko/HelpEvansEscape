@@ -3,11 +3,18 @@ import 'package:help_evans_escape/configs/config.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:help_evans_escape/screens/screen.dart';
 
-class IntroScreen extends StatelessWidget {
+class LandingPage extends StatelessWidget {
   final pageDecoration = PageDecoration(
     titleTextStyle: TextStyle(
+      color: Colors.greenAccent,
+      fontSize: 25.0,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1,
+      fontFamily: 'Pacifico',
+    ),
+    bodyTextStyle: TextStyle(
       color: Palette.scaffold,
-      fontSize: 18.0,
+      fontSize: 17.0,
       fontWeight: FontWeight.bold,
       letterSpacing: 1,
       fontFamily: 'Alata',
@@ -24,8 +31,9 @@ class IntroScreen extends StatelessWidget {
             height: 275.0,
           ),
         ),
-        title: "Stephen blunders enabled Evans to escape! ",
-        body: "",
+        title: "Stephens Stupidity",
+        body:
+            "Stephens was given the responsibility of ensuring the utmost security of \nJames Rodrick Evans. \nHe however, was not fit for the task and personally escorted Evans out of the prison gates. ",
         // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
@@ -36,9 +44,9 @@ class IntroScreen extends StatelessWidget {
             height: 275.0,
           ),
         ),
-        title:
-            "The Governer was decieved again and again by Evans & is very furious.",
-        body: "",
+        title: "Good For a Giggle Gullible Governor",
+        body:
+            "The Governer was decieved again and again by Evans.\n Despite having a hunch on the sanctity of the phone calls, he did not do anything. ",
         // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
@@ -49,8 +57,9 @@ class IntroScreen extends StatelessWidget {
             height: 275.0,
           ),
         ),
-        title: "The entire Police force is looking for \nEvans the Break",
-        body: "",
+        title: "Evans the Break",
+        body:
+            "After excaping from the prison, pretending to be McLeary, the police finally caught up with Evans. ",
         // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
@@ -61,8 +70,9 @@ class IntroScreen extends StatelessWidget {
             height: 275.0,
           ),
         ),
-        title: "Help Evans Esacpe & get to his runaway van, before hes caught!",
-        body: "",
+        title: "Help Evans Esacpe",
+        body:
+            "Help Evans get to his runaway van and fool the Governer and his army of officers again!",
         // footer: Text("Hello"),
         decoration: pageDecoration,
       ),
@@ -71,12 +81,8 @@ class IntroScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double screenHeight = MediaQuery.of(context).size.height;
-    final double screenWidth = MediaQuery.of(context).size.width;
-    return Container(
-      height: screenHeight / 2,
-      width: screenWidth,
-      child: IntroductionScreen(
+    return Scaffold(
+      body: IntroductionScreen(
         curve: Curves.fastOutSlowIn,
         dotsDecorator: DotsDecorator(
           size: const Size.square(10.0),
@@ -106,14 +112,13 @@ class IntroScreen extends StatelessWidget {
             fontSize: 14,
           ),
         ),
-        globalBackgroundColor: Palette.lightPink,
+        globalBackgroundColor: Palette.lightBlue,
         pages: getPages(),
         onDone: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => HomeScreen()),
-          // );
-          Navigator.pop(context);
+          Navigator.pushReplacement(
+            context,
+            SizeRoute(page: HomeScreen()),
+          );
         },
       ),
     );
