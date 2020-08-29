@@ -1,7 +1,5 @@
-![evans](https://media.giphy.com/media/UoSdXhntUVYciLnUIn/giphy.gif)
-
 <h1 align="center">
-  <img width="350" src="https://media.giphy.com/media/UoSdXhntUVYciLnUIn/giphy.gif"/>
+  <img width="250" height="250" src="https://media.giphy.com/media/UoSdXhntUVYciLnUIn/giphy.gif"/>
   Help Evans Escape
 </h1>
 
