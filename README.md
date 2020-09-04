@@ -2,11 +2,11 @@
     <img width="250" height="250" src="https://media.giphy.com/media/U23WM0YjoJHIY5FG4h/giphy.gif"/>
 </p>
 
+
 <p align = "center">
-  <img  height = "100" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'>
+  <a href="https://play.google.com/store/apps/details?id=com.jivansh.help_evans_escape"><img alt="Get it on Google Play" height="80" src="google-play-badge.png"></a>
 
 </p>
-
 <h1 align="center">Help Evans Escape</h1>
 
 <h4 align="center">
