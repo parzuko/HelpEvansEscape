@@ -1,6 +1,12 @@
 <p align = "center">
     <img width="250" height="250" src="https://media.giphy.com/media/U23WM0YjoJHIY5FG4h/giphy.gif"/>
 </p>
+
+<p align = "center">
+  <img  height = "100" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'>
+
+</p>
+
 <h1 align="center">Help Evans Escape</h1>
 
 <h4 align="center">
@@ -57,4 +63,4 @@ flutter run
 
 ---
 
-Made with ♥ by Jivansh Sharma :v: [Say Hi!](https://www.linkedin.com/in/jivansh-sharma-b373681a6/)
+Made with ♥ by Jivansh Sharma :v: [Say Hi!](https://www.linkedin.com/in/jivansh/)
