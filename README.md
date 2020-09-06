@@ -31,7 +31,7 @@
 </p>
 </details>
 
-## :computer: Dev Dependancies
+## :computer: Dev Dependencies
 
 This project was developed with the following technologies:
 
